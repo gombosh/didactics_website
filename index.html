@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הוראה מתקנת | להצליח עם חיוך - סיון גומבוש</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts: Assistant & Heebo (authentic Israeli website typography) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Heebo:wght@300;400;500;700;900&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wixTeal: {
+                            50: '#f0fdf9',
+                            100: '#cbfbee',
+                            200: '#9cf4de',
+                            300: '#5fe6cb',
+                            400: '#2ccfb4',
+                            500: '#14b39a',
+                            600: '#0c907e',
+                            700: '#0e7366',
+                            800: '#105c53',
+                            900: '#124c45',
+                        },
+                        wixCoral: '#f59e0b',
+                        wixSand: '#faf7f2',
+                        wixBlue: '#1e3a8a',
+                    },
+                    fontFamily: {
+                        sans: ['Assistant', 'Heebo', 'Rubik', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Assistant', 'Heebo', sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        /* Subtle textured backgrounds reminiscent of Wix classic clean designs */
+        .wix-pattern-bg {
+            background-color: #fcfbf8;
+            background-image: radial-gradient(#e5e7eb 0.75px, transparent 0.75px);
+            background-size: 16px 16px;
+        }
+
+        .hero-banner-bg {
+            background: linear-gradient(180deg, #ffffff 0%, #f0fdf9 60%, #e6fcf5 100%);
+        }
+
+        .quote-bg {
+            background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+        }
+
+        .circle-service-card {
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+        .circle-service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(13, 148, 136, 0.15), 0 8px 10px -6px rgba(13, 148, 136, 0.1);
+        }
+
+        /* Video Frame Styling */
+        .video-box {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 1.25rem;
+            background: #1e293b;
+        }
+        .video-box iframe, .video-box video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-wixTeal-500 selection:text-white">
+
+    <!-- Top Announcement Strip (Wix App prompt alternative) -->
+    <div class="bg-wixTeal-700 text-white text-xs py-2 px-4 text-center font-medium flex items-center justify-center gap-3">
+        <span>✨ להצטרפות ותיאום פגישת הערכת מוכנות / למידה: <strong>052-8219395</strong></span>
+        <a href="https://wa.me/972528219395?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%A1%D7%99%D7%95%D7%9F%2C%20%D7%A4%D7%95%D7%A0%D7%94%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8" target="_blank" class="hidden sm:inline-flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 px-3 py-0.5 rounded-full text-white text-[11px] font-bold transition">
+            <i class="fa-brands fa-whatsapp"></i> וואטסאפ מהיר
+        </a>
+    </div>
+
+    <!-- Main Wix-style Header / Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-24">
+                
+                <!-- Logo & Subtitle (Faithful to Wix Brand Identity) -->
+                <a href="#home" class="flex flex-col group">
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl sm:text-3xl font-extrabold text-slate-800 tracking-tight group-hover:text-wixTeal-600 transition">
+                            הוראה מתקנת
+                        </span>
+                        <span class="text-wixTeal-600 font-bold text-xl sm:text-2xl">|</span>
+                        <span class="text-2xl sm:text-3xl font-light text-wixTeal-600 tracking-tight group-hover:text-wixTeal-700 transition">
+                            להצליח עם חיוך
+                        </span>
+                    </div>
+                    <span class="text-xs text-slate-500 font-medium mt-0.5">סיון גומבוש - אבחון דידקטי וטיפול בלקויות למידה MA</span>
+                </a>
+
+                <!-- Desktop Nav Menu (Original Wix Site Order) -->
+                <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
+                    <a href="#home" class="text-wixTeal-700 hover:text-wixTeal-600 transition">בית</a>
+                    <a href="#about" class="hover:text-wixTeal-600 transition">אודות</a>
+                    <a href="#services" class="hover:text-wixTeal-600 transition">שירותים</a>
+                    <a href="#mentoring" class="hover:text-wixTeal-600 transition">תכנית ליווי</a>
+                    <a href="#workshops" class="hover:text-wixTeal-600 transition">סדנאות</a>
+                    <a href="#blog" class="hover:text-wixTeal-600 transition">בלוג</a>
+                    <a href="#contact" class="hover:text-wixTeal-600 transition">צור קשר</a>
+                    <a href="#directions" class="hover:text-wixTeal-600 transition text-slate-500">איך מגיעים?</a>
+                </nav>
+
+                <!-- Header Action Button -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <button onclick="openGiftModal()" class="px-4 py-2 rounded-full border-2 border-amber-400 bg-amber-50 hover:bg-amber-100 text-amber-900 text-xs font-bold transition flex items-center gap-2">
+                        <i class="fa-solid fa-gift text-amber-600"></i>
+                        <span>מתנה ממני</span>
+                    </button>
+                    <a href="tel:0528219395" class="px-4 py-2 rounded-full bg-wixTeal-600 hover:bg-wixTeal-700 text-white text-xs font-bold transition shadow-sm flex items-center gap-1.5">
+                        <i class="fa-solid fa-phone text-[11px]"></i>
+                        <span>052-8219395</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-700 hover:text-wixTeal-600 text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars" id="menuIcon"></i>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-100 shadow-xl px-6 py-5 space-y-3 font-semibold text-slate-800">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-wixTeal-600">בית</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 hover:text-wixTeal-600">אודות</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="block py-2 hover:text-wixTeal-600">שירותים</a>
+            <a href="#mentoring" onclick="toggleMobileMenu()" class="block py-2 hover:text-wixTeal-600">תכנית ליווי</a>
+            <a href="#workshops" onclick="toggleMobileMenu()" class="block py-2 hover:text-wixTeal-600">סדנאות</a>
+            <a href="#blog" onclick="toggleMobileMenu()" class="block py-2 hover:text-wixTeal-600">בלוג</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 hover:text-wixTeal-600">צור קשר</a>
+            <a href="#directions" onclick="toggleMobileMenu()" class="block py-2 text-slate-500">איך מגיעים?</a>
+            <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+                <button onclick="toggleMobileMenu(); openGiftModal();" class="w-full py-2.5 rounded-xl bg-amber-100 text-amber-900 text-xs font-bold">
+                    🎁 לקבלת מתנה ממני לחצו כאן
+                </button>
+                <a href="tel:0528219395" class="w-full py-2.5 rounded-xl bg-wixTeal-600 text-white text-xs font-bold text-center">
+                    חייגו: 052-8219395
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Wix Profile, Credentials & Intro Video Player -->
+    <section id="home" class="hero-banner-bg pt-12 pb-16 border-b border-teal-100/50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-10">
+                <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-800 tracking-tight">
+                    סיון גומבוש
+                </h1>
+                
+                <p class="text-lg sm:text-xl font-medium text-wixTeal-800 leading-relaxed">
+                    מאבחנת דידקטית מוסמכת האוניברסיטה העברית ומורה להוראה מתקנת באזור רחובות והסביבה.<br class="hidden sm:inline">
+                    בעלת ידע רב וניסיון עשיר עם תלמידים במגוון גילאים.
+                </p>
+
+                <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/90 border border-teal-200/80 text-xs sm:text-sm font-semibold text-slate-700 shadow-sm">
+                    <i class="fa-solid fa-graduation-cap text-wixTeal-600 text-base"></i>
+                    <span>בעלת תואר ראשון בחינוך ולשון עברית, תואר שני (MA) באבחון וטיפול בלקויות למידה, ותעודת הוראה.</span>
+                </div>
+            </div>
+
+            <!-- Authentic Video / Featured Visual Container -->
+            <div class="max-w-2xl mx-auto bg-white rounded-3xl p-4 sm:p-6 shadow-xl border border-teal-100">
+                <div class="video-box shadow-inner">
+                    <!-- Clean illustrative canvas video / media player placeholder -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-slate-900 via-teal-950 to-slate-800 flex flex-col items-center justify-center text-white p-6 text-center">
+                        <div class="w-16 h-16 rounded-full bg-wixTeal-500/30 border-2 border-wixTeal-400 flex items-center justify-center text-white text-2xl mb-4 hover:scale-110 transition cursor-pointer" onclick="toggleDemoVideo()">
+                            <i class="fa-solid fa-play mr-1 text-teal-200" id="playIcon"></i>
+                        </div>
+                        <h3 class="text-base sm:text-lg font-bold">להצליח עם חיוך - סיון גומבוש</h3>
+                        <p class="text-xs text-teal-200 mt-1">צפו בסרטון היכרות קצר על דרך ההוראה והגישה המעצימה</p>
+                        
+                        <!-- Video Controls mockup as seen in original Wix video strip -->
+                        <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-slate-700/60">
+                            <div class="flex items-center gap-3">
+                                <span class="bg-red-600 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">Live</span>
+                                <span class="text-slate-300">Your Video Title</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span id="videoStatus">00:00 / 02:15</span>
+                                <i class="fa-solid fa-volume-high text-xs hover:text-white cursor-pointer" title="Mute/Unmute"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Motto Banner Section: "אני מאמינה שכל ילד וילדה..." -->
+    <section class="py-12 bg-white text-center border-b border-slate-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="relative inline-block">
+                <i class="fa-solid fa-quote-right text-4xl text-wixTeal-100 absolute -top-5 -right-6 -z-10"></i>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-800 leading-snug">
+                    "אני מאמינה שכל ילד וילדה יכולים לעבור תהליך למידה ו-<span class="text-wixTeal-600 underline decoration-wixCoral/60 decoration-4">להצליח עם חיוך</span>,<br class="hidden sm:inline">
+                    במינימום חיכוכים!"
+                </h2>
+                <i class="fa-solid fa-quote-left text-4xl text-wixTeal-100 absolute -bottom-5 -left-6 -z-10"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Iconic Circular Services Section (Faithful to original layout & DSC07546 style) -->
+    <section id="services" class="py-16 wix-pattern-bg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
+                
+                <!-- Bubble 1: הוראה מתקנת -->
+                <div class="circle-service-card bg-white rounded-3xl p-8 border border-slate-200 text-center flex flex-col items-center justify-between shadow-sm">
+                    <div class="w-full flex flex-col items-center">
+                        <!-- Circular Image Wrapper -->
+                        <div class="w-44 h-44 rounded-full p-2 bg-gradient-to-tr from-wixTeal-500 to-teal-200 shadow-md mb-6 relative group overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" 
+                                 alt="הוראה מתקנת" 
+                                 class="w-full h-full object-cover rounded-full group-hover:scale-105 transition duration-500"
+                                 onerror="this.src='https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=600&q=80'">
+                            <div class="absolute inset-0 bg-wixTeal-900/20 rounded-full"></div>
+                        </div>
+
+                        <h3 class="text-2xl font-extrabold text-slate-800 mb-3">הוראה מתקנת</h3>
+                        
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                            הוראה מותאמת אישית לקידום קריאה, הבנת הנקרא, כתיבה וחשבון. חיזוק אסטרטגיות למידה עצמאיות ובניית ביטחון עצמי אצל הילד במינימום תסכול.
+                        </p>
+                    </div>
+
+                    <a href="#contact" class="px-6 py-2.5 rounded-full text-xs font-bold text-wixTeal-700 bg-wixTeal-50 hover:bg-wixTeal-600 hover:text-white transition border border-wixTeal-200">
+                        לפרטים ותיאום שיעור
+                    </a>
+                </div>
+
+                <!-- Bubble 2: תכנית ליווי למורות (Center Spotlight / DSC07546 original photo spot) -->
+                <div class="circle-service-card bg-white rounded-3xl p-8 border-2 border-amber-300 text-center flex flex-col items-center justify-between shadow-md relative">
+                    <div class="absolute -top-3.5 bg-amber-500 text-white text-[11px] font-black px-4 py-1 rounded-full uppercase tracking-wider shadow">
+                        תכנית הליווי המבוקשת
+                    </div>
+
+                    <div class="w-full flex flex-col items-center">
+                        <!-- Circular Image Wrapper -->
+                        <div class="w-44 h-44 rounded-full p-2 bg-gradient-to-tr from-amber-400 to-amber-100 shadow-md mb-6 relative group overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80" 
+                                 alt="תכנית ליווי למורות" 
+                                 class="w-full h-full object-cover rounded-full group-hover:scale-105 transition duration-500"
+                                 onerror="this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80'">
+                            <div class="absolute inset-0 bg-amber-900/10 rounded-full"></div>
+                        </div>
+
+                        <h3 class="text-2xl font-extrabold text-slate-800 mb-3">תכנית ליווי למורות</h3>
+                        
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                            ליווי והדרכה מקצועית למורות ולמורים להוראה מתקנת בתחילת הדרך. מעבר מתאוריה אקדמית ליישום מעשי מובנה, סדור ומוצלח מול תלמידים בשטח.
+                        </p>
+                    </div>
+
+                    <a href="#mentoring" class="px-6 py-2.5 rounded-full text-xs font-bold text-amber-900 bg-amber-100 hover:bg-amber-500 hover:text-white transition">
+                        להצטרפות לתכנית הליווי
+                    </a>
+                </div>
+
+                <!-- Bubble 3: אבחון דידקטי ופסיכו-דידקטי -->
+                <div class="circle-service-card bg-white rounded-3xl p-8 border border-slate-200 text-center flex flex-col items-center justify-between shadow-sm">
+                    <div class="w-full flex flex-col items-center">
+                        <!-- Circular Image Wrapper -->
+                        <div class="w-44 h-44 rounded-full p-2 bg-gradient-to-tr from-teal-500 to-sky-200 shadow-md mb-6 relative group overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80" 
+                                 alt="אבחון דידקטי ופסיכו-דידקטי" 
+                                 class="w-full h-full object-cover rounded-full group-hover:scale-105 transition duration-500"
+                                 onerror="this.src='https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80'">
+                            <div class="absolute inset-0 bg-slate-900/15 rounded-full"></div>
+                        </div>
+
+                        <h3 class="text-2xl font-extrabold text-slate-800 mb-3">אבחון דידקטי ופסיכו-דידקטי</h3>
+                        
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                            אבחונים מקצועיים ומקיפים לאיתור קשיי למידה ונקודות חוזק. מתן התאמות רשמיות לבחינות ובניית תוכנית עבודה פרטנית להמשך הדרך בבית הספר.
+                        </p>
+                    </div>
+
+                    <a href="#contact" class="px-6 py-2.5 rounded-full text-xs font-bold text-teal-800 bg-teal-50 hover:bg-teal-700 hover:text-white transition border border-teal-200">
+                        לתיאום אבחון
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Bwell Service Provider Strip (Original Feature from Wix) -->
+    <section class="bg-gradient-to-r from-teal-900 via-teal-800 to-slate-900 text-white py-8 border-y border-teal-700 shadow-md">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-right">
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-teal-300 text-2xl shrink-0 border border-white/10">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-extrabold text-white">
+                        נמצאת ברשימת נותני השירות של Bwell
+                    </h3>
+                    <p class="text-teal-200 text-sm">
+                        עבור אבחון דידקטי ושיעורי הוראה מתקנת מסובסדים לזכאים
+                    </p>
+                </div>
+            </div>
+            <a href="tel:0528219395" class="px-6 py-3 rounded-full bg-white text-teal-900 hover:bg-teal-50 font-extrabold text-xs tracking-wide transition shadow">
+                בדיקת זכאות ושריון מקום
+            </a>
+        </div>
+    </section>
+
+    <!-- Ralph Waldo Emerson Quote & Sivan's Vision Banner -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                
+                <!-- Quote Banner (Emerson) -->
+                <div class="md:col-span-6 quote-bg rounded-3xl p-8 sm:p-10 text-white shadow-xl relative overflow-hidden flex flex-col justify-between min-h-[300px]">
+                    <i class="fa-solid fa-quote-left text-7xl text-white/10 absolute top-4 left-4"></i>
+                    
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-teal-200">מוטו והשראה</span>
+                        <blockquote class="text-2xl sm:text-3xl font-bold leading-relaxed mt-4">
+                            "אל תלך לאן שהדרך מובילה, במקום זאת תלך איפה שאין דרך ותשאיר מאחוריך אחת."
+                        </blockquote>
+                    </div>
+                    
+                    <div class="pt-6 font-semibold text-teal-100 text-sm">
+                        — ראלף וולדו אמרסון
+                    </div>
+                </div>
+
+                <!-- Sivan's Vision & Gift Box -->
+                <div class="md:col-span-6 bg-amber-50/80 rounded-3xl p-8 sm:p-10 border border-amber-200 text-center flex flex-col items-center justify-between min-h-[300px]">
+                    <div class="space-y-4">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-200/80 text-amber-900 text-xs font-bold">
+                            <i class="fa-solid fa-heart text-amber-600"></i> החזון שלי
+                        </div>
+                        
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-800 leading-tight">
+                            החזון שלי הוא שמורות ומורים להוראה מתקנת יקבלו ליווי והדרכה מקצועית בתחילת הדרך.
+                        </h3>
+                        
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            כדי שכל תלמיד יזכה למענה מדויק, רגיש ומעצים, וכדי שמורים יוכלו לפעול בביטחון מלא ובכלים מעשיים מוכחים.
+                        </p>
+                    </div>
+
+                    <div class="pt-6 w-full">
+                        <!-- Original Gift Button -->
+                        <button onclick="openGiftModal()" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-amber-500 hover:bg-amber-600 text-white font-extrabold text-sm shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
+                            🎁 למתנה ממני לחצו כאן
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Mentoring Detailed Section -->
+    <section id="mentoring" class="py-16 bg-slate-50 border-t border-slate-200/60">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm">
+                
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-xs font-bold text-wixTeal-600 uppercase tracking-wider">הדרכה ופיתוח מקצועי</span>
+                    <h2 class="text-3xl font-extrabold text-slate-800 mt-1">תכנית ליווי למורות להוראה מתקנת</h2>
+                    <p class="text-sm text-slate-600 mt-2">הגשר החסר בין התאוריות הנלמדות באקדמיה לבין השטח והקליניקה</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-right">
+                    <div class="p-6 rounded-2xl bg-teal-50/60 border border-teal-100">
+                        <div class="w-10 h-10 rounded-xl bg-wixTeal-600 text-white flex items-center justify-center font-bold mb-4">1</div>
+                        <h4 class="font-bold text-slate-900 mb-2">ארגון ומבנה התהליך</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">הגדרת מטרות מדידות, מיפוי קשיים וחוזקות, ובניית מערכי שיעור מותאמים אישית לכל ילד.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-amber-50/60 border border-amber-100">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center font-bold mb-4">2</div>
+                        <h4 class="font-bold text-slate-900 mb-2">פתרון אתגרים בזמן אמת</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">התמודדות עם התנגדויות, חוסר מוטיבציה, קשיי קשב ודברים שעולים תוך כדי עבודה ומטבע הדברים אינם מופיעים בספרים.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-sky-50/60 border border-sky-100">
+                        <div class="w-10 h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center font-bold mb-4">3</div>
+                        <h4 class="font-bold text-slate-900 mb-2">תקשורת עם ההורים והביה"ס</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">איך מנהלים שיחות משוב עם הורים, מעבירים דוחות מסודרים ומשתפים פעולה עם הצוות החינוכי.</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <a href="https://wa.me/972528219395?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%A1%D7%99%D7%95%D7%9F%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%AA%D7%9B%D7%A0%D7%99%D7%AA%20%D7%94%D7%9C%D7%99%D7%95%D7%95%D7%99%20%D7%9C%D7%9E%D7%95%D7%A8%D7%95%D7%AA" target="_blank" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-wixTeal-600 hover:bg-wixTeal-700 text-white font-bold text-sm shadow transition">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>שיחת התייעצות לגבי תכנית הליווי</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Authentic Quotes from Wix Site) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center mb-14">
+                <span class="text-xs font-bold text-wixTeal-600 uppercase tracking-wider">משובים מהשטח</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-800 mt-1">המלצות</h2>
+                <div class="w-16 h-1 bg-wixTeal-500 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Racheli -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 flex flex-col justify-between relative shadow-sm hover:shadow-md transition">
+                    <div class="text-amber-400 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <blockquote class="text-sm text-slate-700 leading-relaxed font-medium italic mb-6">
+                        "תודה רבה! ממש נהנתי. את יעילה ומדויקת. מאמינה שזה בדיוק מה שהיה לי חסר בארגון התהליך. מחכה להמשך!"
+                    </blockquote>
+                    <div class="pt-4 border-t border-slate-200">
+                        <div class="font-extrabold text-slate-900 text-sm">רחלי</div>
+                        <div class="text-xs text-wixTeal-700 font-semibold">מורה בתכנית הליווי</div>
+                    </div>
+                </div>
+
+                <!-- Nitza -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 flex flex-col justify-between relative shadow-sm hover:shadow-md transition">
+                    <div class="text-amber-400 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <blockquote class="text-sm text-slate-700 leading-relaxed font-medium italic mb-6">
+                        "ממש תודה סיון. כהורים שצריכים לקבל החלטות כאלה מהותיות, וכל הזמן לרוץ ולוודא שהכל עובד ומתקתק לטובת בננו, את משענת מדהימה. תודה על הסבלנות ועל הרגישות ועל התמיכה."
+                    </blockquote>
+                    <div class="pt-4 border-t border-slate-200">
+                        <div class="font-extrabold text-slate-900 text-sm">ניצה</div>
+                        <div class="text-xs text-wixTeal-700 font-semibold">אמא של תלמיד</div>
+                    </div>
+                </div>
+
+                <!-- Tali -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 flex flex-col justify-between relative shadow-sm hover:shadow-md transition">
+                    <div class="text-amber-400 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <blockquote class="text-sm text-slate-700 leading-relaxed font-medium italic mb-6">
+                        "סיון, השנה איתך היא הדבר הכי חכם שעשיתי. נקודה. יש הבדל בין ללמוד באקדמיה או להאזין ל- 'איך לבצע שיטה' לבין להוריד את זה לקרקע ולהתמודד עם דברים שעולים תוך כדי, ומטבע הדברים לא עולים בתיאוריות."
+                    </blockquote>
+                    <div class="pt-4 border-t border-slate-200">
+                        <div class="font-extrabold text-slate-900 text-sm">טלי</div>
+                        <div class="text-xs text-wixTeal-700 font-semibold">מורה שלימדה בצוות</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Workshops & Blog Section -->
+    <section id="workshops" class="py-16 bg-slate-50 border-t border-slate-200/80">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Workshops card -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">סדנאות והרצאות</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                        מפגשים מעשיים לצוותי חינוך ולהורים: כלים לאיתור קשיי למידה בגיל הרך וביסודי, דרכי תיווך נכונות בשיעורי בית, ויצירת סביבה לומדת רגועה ומעודדת בבית ובכיתה.
+                    </p>
+                    <a href="#contact" class="inline-block px-6 py-2.5 rounded-full bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs">
+                        לתיאום סדנה לבית הספר או לגן
+                    </a>
+                </div>
+
+                <!-- Blog card -->
+                <div id="blog" class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-teal-100 text-wixTeal-700 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-newspaper"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">בלוג ומאמרים מקצועיים</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                        טיפים שבועיים להורים בנושא הוראה מתקנת, קריאה וכתיבה, התמודדות עם לקויות למידה ודיסלקציה, והמלצות פרקטיות למורים.
+                    </p>
+                    <button onclick="openBlogModal(1)" class="inline-block px-6 py-2.5 rounded-full bg-wixTeal-600 hover:bg-wixTeal-700 text-white font-bold text-xs">
+                        קריאת מאמרים נבחרים
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact & Direct Call CTA Section (Original Wix Format: "052-8219395 לקביעת פגישת הערכה ללא התחייבות") -->
+    <section id="contact" class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            
+            <span class="text-xs font-bold text-wixTeal-600 uppercase tracking-widest">צרו קשר ישיר</span>
+            
+            <!-- Large Phone Call Anchor like Wix original bottom CTA -->
+            <div class="mt-4 mb-3">
+                <a href="tel:0528219395" class="text-3xl sm:text-5xl font-black text-slate-800 hover:text-wixTeal-600 transition dir-ltr inline-block tracking-tight">
+                    052-8219395
+                </a>
+            </div>
+
+            <p class="text-lg sm:text-xl font-bold text-wixTeal-700 mb-8">
+                לקביעת פגישת הערכה ללא התחייבות
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 max-w-md mx-auto">
+                <a href="https://wa.me/972528219395?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%A1%D7%99%D7%95%D7%9F%2C%20%D7%A4%D7%95%D7%A0%D7%94%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%9C%D7%A7%D7%91%D7%99%D7%A2%D7%AA%20%D7%A4%D7%92%D7%99%D7%A9%D7%AA%20%D7%94%D7%A2%D7%A8%D7%9B%D7%94" target="_blank" class="flex-1 min-w-[200px] py-3.5 px-6 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-sm shadow flex items-center justify-center gap-2 transition">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>הודעת וואטסאפ</span>
+                </a>
+                <a href="tel:0528219395" class="flex-1 min-w-[200px] py-3.5 px-6 rounded-full bg-wixTeal-600 hover:bg-wixTeal-700 text-white font-extrabold text-sm shadow flex items-center justify-center gap-2 transition">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>התקשרו עכשיו</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- "איך מגיעים?" / Interactive Map & Rehovot Area Strip -->
+    <section id="directions" class="py-12 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-bold text-slate-800">איך מגיעים?</h3>
+                <p class="text-xs sm:text-sm text-slate-600 mt-1">קליניקה ברחובות — שירות לתושבי רחובות, נס ציונה, מזכרת בתיה והסביבה</p>
+            </div>
+
+            <div class="rounded-3xl overflow-hidden shadow-md border border-slate-200 h-64 sm:h-80 w-full bg-slate-200">
+                <!-- Embedded OpenStreetMap / Google location frame for Rehovot -->
+                <iframe 
+                    title="מפת הגעה לקליניקה ברחובות"
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    loading="lazy" 
+                    allowfullscreen
+                    src="https://maps.google.com/maps?q=Rehovot,%20Israel&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Original Wix Bottom Footer with Copyright & Social Links -->
+    <footer class="bg-white border-t border-slate-200 py-10 text-slate-600 text-xs">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-right">
+                
+                <!-- Copyright & Credentials signature as in original Wix footer -->
+                <div>
+                    <div class="font-bold text-slate-800 text-sm mb-1">
+                        © 2015-2026 אבחון וטיפול בלקויות למידה MA סיון גומבוש
+                    </div>
+                    <div class="text-slate-500">
+                        הוראה מתקנת, אבחון דידקטי ופסיכו-דידקטי | רחובות והסביבה
+                    </div>
+                </div>
+
+                <!-- Original Social Links (Phone, Email, Facebook) -->
+                <div class="flex items-center gap-6 text-sm font-semibold">
+                    <a href="tel:0528219395" class="hover:text-wixTeal-600 flex items-center gap-1.5 transition">
+                        <i class="fa-solid fa-phone text-wixTeal-600"></i>
+                        <span>Phone</span>
+                    </a>
+                    <a href="mailto:gombosh3@gmail.com" class="hover:text-wixTeal-600 flex items-center gap-1.5 transition">
+                        <i class="fa-solid fa-envelope text-wixTeal-600"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="hover:text-wixTeal-600 flex items-center gap-1.5 transition">
+                        <i class="fa-brands fa-facebook text-wixTeal-600"></i>
+                        <span>Facebook</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Widget -->
+    <a href="https://wa.me/972528219395?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%A1%D7%99%D7%95%D7%9F%2C%20%D7%A4%D7%95%D7%A0%D7%94%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8" target="_blank" class="fixed bottom-6 left-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center text-2xl shadow-xl hover:scale-105 transition" title="צ'אט וואטסאפ ישיר עם סיון">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Lead Magnet Free Gift Modal ("למתנה ממני לחצו כאן") -->
+    <div id="giftModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 relative shadow-2xl text-slate-800">
+            <button onclick="closeGiftModal()" class="absolute top-4 left-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="text-center space-y-4">
+                <div class="w-16 h-16 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-3xl mx-auto">
+                    <i class="fa-solid fa-gift"></i>
+                </div>
+                <h3 class="text-2xl font-black text-slate-900">המתנה שלך מסיון!</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                    מדריך תמציתי ומעשי: <strong>"עקרונות זהב להוראה מתקנת ממוקדת ולמידה מהנה בבית ובכיתה"</strong>.
+                </p>
+
+                <form onsubmit="handleGiftSubmit(event)" class="space-y-3 text-right">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">שם מלא</label>
+                        <input type="text" required placeholder="שמכם" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-wixTeal-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">מספר וואטסאפ או דוא"ל</label>
+                        <input type="text" required placeholder="05X-XXXXXXX או אימייל" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-wixTeal-500">
+                    </div>
+                    <button type="submit" class="w-full py-3.5 rounded-full font-bold bg-amber-500 hover:bg-amber-600 text-white text-sm shadow transition">
+                        קבלו את המדריך החינמי כעת
+                    </button>
+                </form>
+
+                <div id="giftSuccess" class="hidden py-4 text-emerald-600 font-bold text-sm">
+                    ✨ תודה רבה! המדריך נשלח אליכם בהצלחה.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Reader Modal for Blog Posts -->
+    <div id="blogModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 relative shadow-2xl text-slate-800">
+            <button onclick="closeBlogModal()" class="absolute top-4 left-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-teal-100 text-wixTeal-800 inline-block mb-3">טיפים להורים ומורים</span>
+                <h3 class="text-2xl font-extrabold text-slate-900 mb-4">איך להפוך את הלמידה להצלחה עם חיוך?</h3>
+                
+                <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+                    <p>
+                        אחד העקרונות החשובים ביותר בהוראה מתקנת הוא פירוק המשימה הלימודית לשלבים קטנים וברי-השגה. כאשר ילד חווה רצף של הצלחות קטנות, תחושת המסוגלות העצמית שלו נבנית מחדש.
+                    </p>
+                    <h4 class="font-bold text-slate-900">3 כללי מפתח:</h4>
+                    <ul class="list-disc list-inside space-y-1 text-slate-600">
+                        <li><strong>שימת דגש על מאמץ ולא רק על תוצאה</strong> – חיזוק על הדרך וההתמדה.</li>
+                        <li><strong>זיהוי נקודות חוזק</strong> – מציאת התחומים שבהם הילד זורח ושילובם בתהליך הלמידה.</li>
+                        <li><strong>תיאום ציפיות והפחתת חיכוכים</strong> – הגדרת זמנים ברורים ומנוחה מספקת.</li>
+                    </ul>
+                    <p class="pt-2">
+                        לייעוץ פרטני ולתיאום פגישה, ניתן ליצור קשר בטלפון: 052-8219395.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Client-side Scripts -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function openGiftModal() {
+            document.getElementById('giftModal').classList.remove('hidden');
+        }
+
+        function closeGiftModal() {
+            document.getElementById('giftModal').classList.add('hidden');
+        }
+
+        function handleGiftSubmit(e) {
+            e.preventDefault();
+            document.getElementById('giftSuccess').classList.remove('hidden');
+            setTimeout(() => {
+                closeGiftModal();
+                document.getElementById('giftSuccess').classList.add('hidden');
+            }, 2200);
+        }
+
+        function openBlogModal() {
+            document.getElementById('blogModal').classList.remove('hidden');
+        }
+
+        function closeBlogModal() {
+            document.getElementById('blogModal').classList.add('hidden');
+        }
+
+        let isPlaying = false;
+        function toggleDemoVideo() {
+            isPlaying = !isPlaying;
+            const playIcon = document.getElementById('playIcon');
+            const status = document.getElementById('videoStatus');
+            if (isPlaying) {
+                playIcon.className = "fa-solid fa-pause mr-0 text-teal-200";
+                status.innerText = "00:45 / 02:15";
+            } else {
+                playIcon.className = "fa-solid fa-play mr-1 text-teal-200";
+                status.innerText = "00:00 / 02:15";
+            }
+        }
+    </script>
+</body>
+</html>

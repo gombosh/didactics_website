@@ -1,0 +1,187 @@
+/* ===== להצליח עם חיוך – סיון גומבוש ===== */
+
+:root{
+  --yellow:#ffefad;
+  --blue:#b7e3f0;
+  --cream:#fdfaf1;
+  --navy:#003154;
+  --navy-tag:#1f3d63;
+  --coral:#df6b43;
+  --green:#8baf84;
+  --gray-section:#aaaaaa;
+  --footer:#2a2a2a;
+  --text:#333333;
+  --maxw:1000px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:'Assistant','Heebo',Arial,sans-serif;
+  color:var(--text);
+  background:var(--yellow);
+  line-height:1.75;
+  font-size:17px;
+}
+img{max-width:100%;display:block;}
+a{color:var(--navy);}
+h1,h2,h3{margin:0 0 .5em;line-height:1.35;color:var(--navy);}
+
+/* page background variants (set on <body class="..."> ) */
+body.bg-yellow{background-color:var(--yellow);}
+body.bg-blue{background-color:var(--blue);}
+body.bg-plain{background-color:#f4f7f8;}
+body.bg-yellow main,body.bg-yellow{
+  background-image:url("assets/doodle-bg.png");
+  background-size:300px 300px;
+  background-blend-mode:multiply;
+}
+
+/* ---------- Header ---------- */
+.topbar{background:var(--cream);}
+.banner{max-width:1182px;margin:0 auto;}
+.banner a{display:block;}
+.banner img{width:100%;}
+nav.mainnav{background:var(--cream);border-bottom:1px solid #ece3c4;}
+nav.mainnav ul{
+  max-width:1182px;margin:0 auto;padding:16px 20px;
+  list-style:none;display:flex;flex-wrap:wrap;justify-content:space-between;
+  column-gap:20px;row-gap:8px;font-size:19px;
+}
+nav.mainnav a{color:var(--navy);font-weight:600;text-decoration:none;}
+nav.mainnav a:hover{color:var(--coral);}
+nav.mainnav a.active{color:var(--green);}
+
+/* ---------- Layout ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+main{padding-bottom:10px;}
+section{padding:44px 0;}
+.page-title{
+  text-align:center;font-size:30px;font-weight:700;color:var(--navy);
+  margin:34px 0 8px;
+}
+.page-title.boxed{
+  display:table;margin-left:auto;margin-right:auto;
+  border:1px solid #cdd8dc;background:#fff;padding:10px 34px;letter-spacing:2px;
+}
+.lead{max-width:760px;margin:0 auto 26px;text-align:center;font-size:18px;}
+
+/* ---------- Home: services row ---------- */
+.services{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:26px;padding-top:40px;
+}
+.service figure{margin:0;}
+.service img{width:100%;height:190px;object-fit:cover;box-shadow:0 1px 4px rgba(0,0,0,.18);}
+.service .tag{
+  position:relative;margin-top:16px;margin-left:19px;
+  background:var(--navy-tag);color:#fff;font-weight:700;font-size:15px;
+  text-align:center;padding:9px 14px;
+}
+.service .tag::before{
+  content:"";position:absolute;left:100%;top:0;
+  border:19px solid transparent;border-left-color:var(--navy-tag);
+}
+
+/* ---------- Home: two column ---------- */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+.col h2{font-size:30px;font-weight:700;}
+.headline{font-size:27px;font-weight:700;color:var(--navy);line-height:1.5;}
+.headline .coral{color:var(--coral);}
+.video-wrap{position:relative;width:100%;padding-bottom:56.25%;height:0;margin:22px 0;background:#000;border-radius:2px;overflow:hidden;}
+.video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+.vision-h{font-family:'Frank Ruhl Libre',serif;font-weight:500;color:var(--navy);font-size:28px;margin-top:6px;}
+.gift{display:inline-block;margin:14px 0 4px;color:var(--coral);font-weight:700;font-size:18px;text-decoration:none;}
+.gift:hover{text-decoration:underline;}
+.fb-embed{margin-top:26px;max-width:340px;}
+.fb-embed iframe{border:none;overflow:hidden;width:100%;height:220px;background:#fff;}
+.fb-fallback{display:block;border:1px solid #d9d2b4;background:#fff;padding:12px 16px;font-weight:600;color:#1877f2;text-decoration:none;}
+.bio p{margin:0 0 1em;}
+.bwell{margin:22px 0;font-size:15px;color:#555;}
+.bwell b{color:var(--navy);}
+.garden{margin-top:8px;box-shadow:0 2px 10px rgba(0,0,0,.2);}
+
+/* ---------- Generic content pages ---------- */
+.content-grid{
+  display:grid;grid-template-columns:320px 1fr;gap:40px;align-items:start;
+}
+.content-grid.right-img{grid-template-columns:1fr 320px;}
+.content-grid img{width:100%;box-shadow:0 3px 12px rgba(0,0,0,.18);}
+.prose h2{font-size:24px;margin-top:1.4em;}
+.prose h3{font-size:19px;color:var(--coral);margin-top:1.4em;}
+.prose ul{padding-inline-start:1.3em;}
+.prose li{margin:.3em 0;}
+.prose .muted{color:#666;font-size:15px;}
+.two-up{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+.card-soft{background:rgba(255,255,255,.55);border:1px solid rgba(0,0,0,.06);border-radius:8px;padding:22px 24px;}
+.center-img{max-width:520px;margin:30px auto 0;}
+.price-box{background:#fff;border:1px solid #d9e2e6;border-radius:8px;padding:16px 22px;display:inline-block;margin:10px 0;}
+.btn{
+  display:inline-block;margin-top:18px;background:var(--navy);color:#fff;
+  padding:11px 26px;border-radius:30px;font-weight:700;text-decoration:none;
+}
+.btn:hover{background:#00263f;}
+
+/* ---------- Contact form ---------- */
+form.contact{max-width:520px;margin-top:18px;}
+form.contact input,form.contact textarea{
+  width:100%;padding:11px 13px;margin-bottom:12px;border:1px solid #9bbecb;
+  background:#cfe6ee;border-radius:3px;font:inherit;color:#123;
+}
+form.contact textarea{min-height:120px;resize:vertical;}
+form.contact button{
+  background:var(--navy);color:#fff;border:0;padding:10px 30px;border-radius:3px;
+  font-weight:700;cursor:pointer;
+}
+.contact-meta{margin-top:20px;font-size:15px;line-height:2;}
+
+/* ---------- Directions ---------- */
+.map-frame{border:6px solid var(--coral);border-radius:4px;overflow:hidden;margin-top:18px;}
+.map-frame iframe{display:block;width:100%;height:420px;border:0;}
+
+/* ---------- Blog ---------- */
+.blog-layout{display:grid;grid-template-columns:1fr 260px;gap:40px;align-items:start;}
+.posts{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+.post-card{background:#fff;border:1px solid #e7dcae;border-radius:4px;overflow:hidden;display:flex;flex-direction:column;}
+.post-card img{width:100%;height:150px;object-fit:cover;}
+.post-card .body{padding:14px 16px;flex:1;display:flex;flex-direction:column;}
+.post-card h3{font-size:17px;margin:0 0 8px;}
+.post-card p{font-size:14px;color:#555;margin:0 0 12px;flex:1;}
+.post-card .meta{font-size:12px;color:#999;}
+.post-card a.more{margin-top:10px;font-weight:700;color:var(--coral);text-decoration:none;font-size:14px;}
+.sidebar h4{color:var(--navy);border-bottom:2px solid var(--coral);padding-bottom:6px;margin-top:0;}
+.sidebar ul{list-style:none;padding:0;margin:0 0 26px;font-size:14px;}
+.sidebar li{padding:5px 0;border-bottom:1px solid #e7dcae;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;}
+.tags span{background:#fff;border:1px solid #e7dcae;border-radius:12px;padding:3px 10px;font-size:12px;}
+
+/* ---------- Testimonials ---------- */
+.testimonials{background:var(--gray-section);color:#fff;padding:44px 0;}
+.testimonials h2{text-align:center;color:#fff;font-size:30px;font-weight:700;margin-bottom:28px;}
+.testi-grid{max-width:var(--maxw);margin:0 auto;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:34px;}
+.testi-grid blockquote{margin:0;font-size:15px;line-height:1.75;}
+.testi-grid cite{display:block;margin-top:10px;font-style:normal;font-weight:700;font-size:14px;}
+
+/* ---------- Footer ---------- */
+footer{background:var(--footer);color:#e8e8e8;padding:34px 0;}
+.footer-inner{max-width:var(--maxw);margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+.footer-cta{font-size:18px;color:#cfcfcf;}
+.footer-phone{display:flex;align-items:center;gap:14px;}
+.footer-phone .icon{width:56px;height:auto;flex:none;}
+.footer-phone .num{font-size:40px;font-weight:800;letter-spacing:1px;line-height:1;color:#efefef;text-decoration:none;}
+.socials{display:flex;gap:12px;}
+.socials img{width:34px;height:34px;}
+.copyright{max-width:var(--maxw);margin:22px auto 0;padding:0 20px;font-size:12px;color:#9a9a9a;}
+
+/* ---------- Responsive ---------- */
+@media (max-width:820px){
+  .services{grid-template-columns:1fr;}
+  .two-col,.two-up{grid-template-columns:1fr;gap:34px;}
+  .content-grid,.content-grid.right-img{grid-template-columns:1fr;gap:26px;}
+  .blog-layout{grid-template-columns:1fr;}
+  .posts{grid-template-columns:1fr;}
+  .testi-grid{grid-template-columns:1fr;gap:24px;}
+  .service img{height:220px;}
+  nav.mainnav ul{gap:14px;font-size:16px;}
+  .footer-inner{justify-content:center;text-align:center;}
+  .footer-phone .num{font-size:32px;}
+}

@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script>try{if(document.referrer.indexOf(location.origin)===0)document.documentElement.classList.add("nav-seen")}catch(e){}</script>
 </head>
 <body class="bg-blue">
 
@@ -35,18 +36,54 @@
     <section>
       <h1 class="page-title boxed">צור קשר</h1>
 
-      <div class="content-grid" style="margin-top:26px;">
-        <img src="assets/contact-desk.jpg" alt="סיון גומבוש" style="align-self:start;">
-        <div class="prose">
-          <p>לשאלות בנושא שיעורי הוראה מתקנת, התייעצות לגבי הצורך באבחון ילדיכם, פרטים לגבי תכנית ליווי אישית עבור מורות להוראה מתקנת – ניתן למלא את הטופס הבא:</p>
+      <div class="content-grid right-img" style="margin-top:26px;">
+        <div class="prose contact-intro">
+          <img class="bird" src="assets/bird.png" alt="" aria-hidden="true">
+          <hr class="rule">
+          <p>לשאלות בנושא שיעורי הוראה מתקנת,<br>התייעצות לגבי הצורך באבחון ילדיכם,<br>פרטים לגבי תכנית ליווי אישית עבור מורות להוראה מתקנת,</p>
+          <p><b class="red">ניתן למלא את הטופס הבא:</b></p>
+          <hr class="rule">
 
-          <form class="contact" action="mailto:sivan@didactics.co.il" method="post" enctype="text/plain">
-            <input type="text" name="שם" placeholder="שם" required>
-            <input type="email" name="אימייל" placeholder="אימייל" required>
-            <input type="text" name="נושא" placeholder="נושא">
-            <textarea name="הודעה" placeholder="הודעה"></textarea>
+          <!-- Delivered by Web3Forms (web3forms.com) to sivan@didactics.co.il.
+               The access key is public by design: it can only send to that inbox. -->
+          <form class="contact" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="67946c0e-f5ce-40be-b956-40ae3bd66f3c">
+            <input type="hidden" name="from_name" value="אתר להצליח עם חיוך">
+            <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <label class="sr-only" for="cf-name">שם</label>
+            <input id="cf-name" type="text" name="name" placeholder="שם *" autocomplete="name" required>
+            <label class="sr-only" for="cf-email">אימייל</label>
+            <input id="cf-email" type="email" name="email" placeholder="אימייל *" autocomplete="email" required>
+            <label class="sr-only" for="cf-subject">נושא</label>
+            <input id="cf-subject" type="text" name="subject" placeholder="נושא">
+            <label class="sr-only" for="cf-message">הודעה</label>
+            <textarea id="cf-message" name="message" placeholder="הודעה *" required></textarea>
             <button type="submit">שלח</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
           </form>
+          <script>
+          // Send in the background and show the result inline. Without JS the
+          // form still posts normally and Web3Forms shows its own thank-you page.
+          (function(){
+            var f=document.getElementById('contact-form'),s=f.querySelector('.form-status'),b=f.querySelector('button');
+            f.addEventListener('submit',function(e){
+              e.preventDefault();
+              var d=new FormData(f);
+              if(!d.get('subject'))d.set('subject','פנייה חדשה מהאתר');
+              b.disabled=true;s.className='form-status';s.textContent='שולח...';
+              fetch(f.action,{method:'POST',headers:{Accept:'application/json'},body:d})
+                .then(function(r){return r.json()})
+                .then(function(r){
+                  if(!r.success)throw new Error(r.message);
+                  f.reset();s.className='form-status ok';s.textContent='תודה! ההודעה נשלחה ואחזור אליך בהקדם.';
+                })
+                .catch(function(){
+                  s.className='form-status err';s.textContent='אירעה שגיאה בשליחה. אפשר לנסות שוב או לכתוב ישירות ל-sivan@didactics.co.il';
+                })
+                .then(function(){b.disabled=false});
+            });
+          })();
+          </script>
 
           <div class="contact-meta">
             <div>כתובת דואר אלקטרוני: <a href="mailto:sivan@didactics.co.il">sivan@didactics.co.il</a></div>
@@ -54,6 +91,7 @@
             <div>כתובת לדואר: שדרות ח"ן 46, רחובות</div>
           </div>
         </div>
+        <img src="assets/contact-desk.jpg" alt="סיון גומבוש">
       </div>
     </section>
   </div>

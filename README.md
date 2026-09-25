@@ -15,7 +15,7 @@ Static HTML/CSS rebuild of the original Wix site
 | `services.html` | שירותים – הוראה מתקנת · אבחון דידקטי · מבדק MOXO |
 | `mentoring.html` | תכנית ליווי למורות |
 | `workshops.html` | סדנאות |
-| `blog.html` | בלוג (static index; posts link to the live Wix blog) |
+| `blog.html` | בלוג (index of the 22 posts in `blog/`; `blog/archive.html` lists them by tag and month) |
 | `contact.html` | צור קשר |
 | `directions.html` | איך מגיעים (Google Maps embed) |
 
@@ -32,7 +32,4 @@ python -m http.server 8000
 
 Then open <http://localhost:8000>.
 
-## TODO
-
-- Wire the contact form to a real handler (currently a `mailto:` fallback).
-- Migrate full blog‑post bodies if the blog should live here rather than on Wix.
+The contact form is delivered by [Web3Forms](https://web3forms.com) to sivan@didactics.co.il.

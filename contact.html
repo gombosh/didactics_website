@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script>try{if(document.referrer.indexOf(location.origin)===0)document.documentElement.classList.add("nav-seen")}catch(e){}</script>
 </head>
 <body class="bg-blue">
 
@@ -35,10 +36,13 @@
     <section>
       <h1 class="page-title boxed">צור קשר</h1>
 
-      <div class="content-grid" style="margin-top:26px;">
-        <img src="assets/contact-desk.jpg" alt="סיון גומבוש" style="align-self:start;">
-        <div class="prose">
-          <p>לשאלות בנושא שיעורי הוראה מתקנת, התייעצות לגבי הצורך באבחון ילדיכם, פרטים לגבי תכנית ליווי אישית עבור מורות להוראה מתקנת – ניתן למלא את הטופס הבא:</p>
+      <div class="content-grid right-img" style="margin-top:26px;">
+        <div class="prose contact-intro">
+          <img class="bird" src="assets/bird.png" alt="" aria-hidden="true">
+          <hr class="rule">
+          <p>לשאלות בנושא שיעורי הוראה מתקנת,<br>התייעצות לגבי הצורך באבחון ילדיכם,<br>פרטים לגבי תכנית ליווי אישית עבור מורות להוראה מתקנת,</p>
+          <p><b class="red">ניתן למלא את הטופס הבא:</b></p>
+          <hr class="rule">
 
           <form class="contact" action="mailto:sivan@didactics.co.il" method="post" enctype="text/plain">
             <input type="text" name="שם" placeholder="שם" required>
@@ -54,6 +58,7 @@
             <div>כתובת לדואר: שדרות ח"ן 46, רחובות</div>
           </div>
         </div>
+        <img src="assets/contact-desk.jpg" alt="סיון גומבוש">
       </div>
     </section>
   </div>

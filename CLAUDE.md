@@ -29,11 +29,6 @@ Open http://localhost:8000. `.claude/launch.json` defines this as the `static` p
   - Pages slide between each other using cross-document view transitions.
   - The services page has CSS slideshows (`.slideshow`). Each one repeats its first image as a fourth slide so the loop has no visible jump, and the `slide3` keyframes assume exactly 3 images.
   - The mentoring page plays `assets/mentoring-promo.mp4` on a muted autoplay loop.
-- **The blog is a static index.** Each post card, tag and archive entry links to its page on the live Wix blog. The URLs come from the Wix blog feed at `https://gombosh3.wixsite.com/didactics/blog-feed.xml`.
+- **The blog lives on this site.** `blog.html` is the index; each of the 22 posts migrated from Wix is its own page in `blog/` (English file names, Hebrew content), with images in `assets/blog/`. `blog/archive.html` lists posts by tag and by month, and the sidebar tags/months link to its anchors (`#tag-<name>`, `#m-YYYY-MM`). Pages in `blog/` use `../` paths for everything. To add a post: copy an existing `blog/*.html`, then add its card and sidebar entries to `blog.html`, add it to `blog/archive.html`, and update the neighbouring posts' newer/older links.
 - **Caching:** `python -m http.server` lets the browser cache pages, so reload with the cache bypassed (hard refresh) after editing.
-- **The contact form** uses a `mailto:` action. No backend handler exists yet.
-
-## Open TODOs (from README)
-
-- Wire the contact form to a real handler.
-- Migrate full blog post bodies if the blog should live here instead of on Wix.
+- **The contact form** posts to Web3Forms (`api.web3forms.com`), which emails sivan@didactics.co.il. The `access_key` in `contact.html` is public by design (it can only send to that inbox). A small inline script submits in the background and shows the result; without JS the form still posts normally.

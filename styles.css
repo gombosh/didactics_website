@@ -125,8 +125,6 @@ section{padding:44px 0;}
 .bio{text-align:center;color:var(--navy);}
 .bio h2{font-size:26px;margin-bottom:.3em;}
 .bio p{margin:0 0 1em;font-size:19px;}
-.bwell{margin:22px 0;font-size:16px;}
-.bwell a{color:var(--navy);}
 .garden{margin-top:8px;box-shadow:0 2px 10px rgba(0,0,0,.2);}
 
 /* ---------- Generic content pages ---------- */
